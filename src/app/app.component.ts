@@ -10,6 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+  title = 'This is my ionic angular 2020 tutorial s series!';
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
