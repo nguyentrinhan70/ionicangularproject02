@@ -2,5 +2,15 @@
   <h1>
     {{title}}
   </h1>
-  <app-movies></app-movies>
+  <nav>
+    <a [routerLink]="['dashboard']" routerLinkActive="router-link-active" >Dashboard</a>
+
+    <a [routerLink]="['movies']" routerLinkActive="router-link-active" >Movies</a>
+  </nav>
+  <router-outlet></router-outlet>
+   <!--<app-messages></app-messages>
+  
+  <app-messages></app-messages>
+  <app-movies></app-movies> 
+  <app-messages></app-messages> -->
 </div>

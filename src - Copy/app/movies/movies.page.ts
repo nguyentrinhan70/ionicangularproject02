@@ -9,11 +9,11 @@ import { MovieService } from '../movie.service';
   styleUrls: ['./movies.page.scss'],
 })
 export class MoviesPage implements OnInit {
-  // movie: Movie ={
-  //   id : 1,
-  //   name: "Star Wars",
-  //   releaseYear: 1977
-  // }
+  movie: Movie ={
+    id : 1,
+    name: "Star Wars",
+    releaseYear: 1977
+  }
   //movies = fakeMovies;
   movies: Movie[];
   constructor(
@@ -30,12 +30,12 @@ export class MoviesPage implements OnInit {
   ngOnInit() {
     this.getMoviesFromServices();
   }
-  // selectedMovie: Movie;
-  // onSelect(movie: Movie): void{
-  //   this.selectedMovie = movie;
-  //   console.log(`selectedMovie =${JSON.stringify(this.selectedMovie)}`);
-  //  // alert(`selectedMovie =${JSON.stringify(this.selectedMovie)}`);
+  selectedMovie: Movie;
+  onSelect(movie: Movie): void{
+    this.selectedMovie = movie;
+    console.log(`selectedMovie =${JSON.stringify(this.selectedMovie)}`);
+   // alert(`selectedMovie =${JSON.stringify(this.selectedMovie)}`);
 
-  // }
+  }
 
 }

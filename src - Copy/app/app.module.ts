@@ -12,27 +12,20 @@ import { MoviesPage } from './movies/movies.page';
 import { FormsModule } from '@angular/forms';
 import { MovieDetailPage } from './movie-detail/movie-detail.page';
 import { MovieService } from './movie.service';
-import { MessageService } from './message.service';
-import { MessagesPage } from './messages/messages.page';
-import { DashboardPage } from './dashboard/dashboard.page';
 
 @NgModule({
   declarations: [AppComponent,
   MoviesPage,
-  MovieDetailPage,
-  MessagesPage,
-  DashboardPage,
+  MovieDetailPage
   ],
   entryComponents: [],
   imports: [BrowserModule, 
     FormsModule,
-    IonicModule.forRoot(), 
-    AppRoutingModule],
+    IonicModule.forRoot(), AppRoutingModule],
   providers: [
     StatusBar,
     SplashScreen,
     MovieService,
-    MessageService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

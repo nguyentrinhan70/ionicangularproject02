@@ -2,13 +2,14 @@
 <div class="parent">
 <ol class="movies">
     <li class="movieListItem" 
-    *ngFor ="let eachMovie of movies">
-    <a routerLink="/movie-detail/{{eachMovie.id}}" style ="text-decoration: none;">
-                {{eachMovie.name}}-{{eachMovie.releaseYear}}
-    </a>
+    *ngFor ="let eachMovie of movies"
+    [class.selected]="eachMovie===selectedMovie"
+    (click)="onSelect(eachMovie);"
+    >
+        {{eachMovie.name}}-{{eachMovie.releaseYear}}
     </li>
 </ol>
-<!-- <app-movie-detail [movie]="selectedMovie"></app-movie-detail> -->
+<app-movie-detail [movie]="selectedMovie"></app-movie-detail>
 </div>
 
 <!-- <h1>Movie's details: </h1>
